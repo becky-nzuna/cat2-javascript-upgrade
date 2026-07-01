@@ -1,0 +1,349 @@
+/* 
+   ZIKARON STUDIOS COLOR SYSTEM
+   A creative studio for stories worth remembering.
+ */
+
+:root {
+
+    /* BACKGROUND COLORS */
+    --col-bg-deep: #001F3F;
+    --col-bg-mid: #0a2a40;
+    --col-bg-light: #1a4a6a;
+
+    /* ACCENT COLORS */
+    --col-cyan: #00D1B2;
+    --col-rust: #B5483A;
+
+    /* TEXT COLORS */
+    --col-white: #ffffff;
+    --col-muted: #aaaaaa;
+    --col-dark: #001F3F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: var(--col-bg-deep);
+    color: var(--col-white);
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background-color: var(--col-cyan);
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    color: var(--col-dark);
+    margin: 0;
+    font-weight: normal;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: var(--col-dark);
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: var(--col-bg-mid);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--col-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* pseudo-class selector */
+nav a:hover {
+    color: var(--col-cyan);
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--col-bg-mid);
+}
+
+.hero img {
+    width: 45%;
+    height: 380px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 4px;
+}
+
+.hero-text h2 {
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    color: var(--col-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--col-cyan);
+    color: var(--col-cyan);
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--col-cyan);
+    color: var(--col-dark);
+}
+
+/* ABOUT SECTION */
+.about {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--col-bg-mid);
+}
+
+.about h2,
+.work h2,
+.contact h2 {
+    color: var(--col-cyan);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.founder-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+.about-content p {
+    color: var(--col-muted);
+    line-height: 1.8;
+}
+
+/* WORK SECTION */
+.work {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--col-bg-mid);
+}
+
+/* CSS Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--col-bg-mid);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--col-bg-light);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+/* pseudo-class selector */
+.card:hover {
+    border-color: var(--col-cyan);
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0.75rem 1rem 0.25rem;
+    color: var(--col-white);
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: var(--col-muted);
+    padding: 0 1rem 1rem;
+}
+
+/* CONTACT SECTION */
+.contact {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--col-bg-mid);
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+input, textarea {
+    background-color: var(--col-bg-mid);
+    border: 1px solid var(--col-bg-light);
+    color: var(--col-white);
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+textarea {
+    height: 110px;
+    resize: none;
+}
+
+/* pseudo-class selector */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--col-cyan);
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid var(--col-cyan);
+    color: var(--col-cyan);
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--col-cyan);
+    color: var(--col-dark);
+}
+
+.contact-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.contact-details p {
+    color: var(--col-muted);
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--col-bg-mid);
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: var(--col-muted);
+}
+
+/* pseudo-element selector */
+footer p:last-child {
+    color: var(--col-rust);
+}
+
+
+/* Tablet and below */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+}
