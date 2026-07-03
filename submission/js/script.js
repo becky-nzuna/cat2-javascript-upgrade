@@ -89,3 +89,11 @@ themeBtn.addEventListener("click", function() {
         themeBtn.textContent = "Switch to Light Mode";
     }
 });
+
+// Feature 5 - Click to reveal banner caption
+const banner = document.getElementById("banner");
+const bannerCaption = document.getElementById("banner-caption");
+
+banner.addEventListener("click", function() {
+    bannerCaption.classList.toggle("visible");
+});
