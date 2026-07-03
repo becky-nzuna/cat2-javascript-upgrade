@@ -407,3 +407,29 @@ footer p:last-child {
     cursor: pointer;
     font-size: 0.75rem;
 }
+
+/* LIGHT MODE */
+body.light-mode {
+    background-color: #f5f5f0;
+    color: #001F3F;
+}
+
+body.light-mode header {
+    background-color: #001F3F;
+}
+
+body.light-mode header h1,
+body.light-mode header p {
+    color: #00D1B2;
+}
+
+#theme-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #001F3F;
+    color: #001F3F;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}

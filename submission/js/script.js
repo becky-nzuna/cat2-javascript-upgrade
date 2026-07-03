@@ -68,3 +68,24 @@ form.addEventListener("submit", function(event) {
         feedback.style.color = "#00D1B2";
     }
 });
+
+// Feature 4 - localStorage theme toggle
+const themeBtn = document.getElementById("theme-btn");
+
+// Check if user had a saved theme
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    themeBtn.textContent = "Switch to Dark Mode";
+}
+
+themeBtn.addEventListener("click", function() {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light");
+        themeBtn.textContent = "Switch to Dark Mode";
+    } else {
+        localStorage.setItem("theme", "dark");
+        themeBtn.textContent = "Switch to Light Mode";
+    }
+});
