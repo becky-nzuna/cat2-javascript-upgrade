@@ -1,0 +1,17 @@
+Feature 1 - Loop-rendered service cards:
+ Services are stored in a JavaScript array and rendered into the DOM using forEach().
+
+Feature 2 - Add & remove items:
+ Users can add services to a wishlist using createElement() and appendChild(). 
+ Each item has a remove button that calls remove().
+
+Feature 3 - Form validation:
+ The contact form uses event.preventDefault() to stop submission, 
+ reads input values and shows feedback text on the page.
+
+Feature 4 - localStorage: 
+ A theme toggle button switches between dark and light mode.
+  The choice is saved in localStorage and remembered on page reload.
+
+Feature 5 - Click-to-reveal banner:
+ Clicking the banner image toggles a caption overlay using classList.toggle().
