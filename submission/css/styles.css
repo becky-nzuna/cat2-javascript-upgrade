@@ -347,3 +347,63 @@ footer p:last-child {
     }
 
 }
+
+/* WISHLIST SECTION */
+.wishlist {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--col-bg-mid);
+}
+
+.wishlist h2 {
+    color: var(--col-cyan);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.wishlist-input {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.wishlist-input input {
+    flex: 1;
+    background-color: var(--col-bg-mid);
+    border: 1px solid var(--col-bg-light);
+    color: var(--col-white);
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+}
+
+#wishlist-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#wishlist-list li {
+    background-color: var(--col-bg-mid);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--col-white);
+}
+
+#wishlist-list li button {
+    background-color: var(--col-rust);
+    border: none;
+    color: var(--col-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}

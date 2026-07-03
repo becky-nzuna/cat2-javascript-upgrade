@@ -19,3 +19,30 @@ services.forEach(function(service) {
     `;
     grid.appendChild(card);
 });
+
+// Feature 2 - Add & Remove items
+const addBtn = document.getElementById("add-btn");
+const wishlistInput = document.getElementById("wishlist-item");
+const wishlistList = document.getElementById("wishlist-list");
+
+addBtn.addEventListener("click", function() {
+    const itemText = wishlistInput.value;
+
+    if (itemText === "") {
+        return;
+    }
+
+    const li = document.createElement("li");
+    li.textContent = itemText;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.textContent = "Remove";
+    removeBtn.addEventListener("click", function() {
+        li.remove();
+    });
+
+    li.appendChild(removeBtn);
+    wishlistList.appendChild(li);
+
+    wishlistInput.value = "";
+});
