@@ -1,4 +1,4 @@
-
+// Feature 1 - Add loop-rendered service cards
 const services = [
     { name: "Design", description: "Identity · Print · Art Direction", image: "images/design.jpg" },
     { name: "Film", description: "Documentary · Commercial", image: "images/film.jpg" },
@@ -45,4 +45,26 @@ addBtn.addEventListener("click", function() {
     wishlistList.appendChild(li);
 
     wishlistInput.value = "";
+});
+
+// Feature 3 - Form validation
+const form = document.querySelector("form");
+const feedback = document.createElement("p");
+feedback.id = "form-feedback";
+form.appendChild(feedback);
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("contact-name").value;
+    const email = document.getElementById("contact-email").value;
+    const message = document.getElementById("contact-message").value;
+    
+    if (name === "" || email === "" || message === "") {
+        feedback.textContent = "Please fill in all fields before sending.";
+        feedback.style.color = "#B5443A";
+    } else {
+        feedback.textContent = "Message sent! We will get back to you soon.";
+        feedback.style.color = "#00D1B2";
+    }
 });
